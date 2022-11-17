@@ -13,4 +13,8 @@ module "foo"{
     source = "./module"
 }
     
-resource "null_resource" "n" {}    
+resource "null_resource" "n" {
+  triggers = {
+    uuid = uuid()
+  }
+}    
