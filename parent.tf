@@ -16,5 +16,10 @@ module "foo"{
 resource "null_resource" "n" {
   triggers = {
     uuid = uuid()
+     
   }
+    provisioner "local-exec" {
+        command = "terraform show -json /terraform/terraform.tfplan"
+    }
+    
 }    
