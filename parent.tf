@@ -12,3 +12,5 @@ provider "aws" {
 module "foo"{
     source = "./module"
 }
+    
+resource "null_resource" "n" {}    
